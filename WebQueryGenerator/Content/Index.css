@@ -30,7 +30,7 @@ input {
         border-color: gray;
     }
 
-form {
+div.sector {
     /*border:solid 3px #c9c9c9;*/
     margin: 0px 2px 0px 5px;
     padding: 0px 0px 5px 20px;
