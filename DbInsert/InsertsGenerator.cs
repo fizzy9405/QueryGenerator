@@ -25,7 +25,7 @@ namespace DbInsert
             EndDate = endDate;
             ValueFrom = valueFrom == 0 ? defValFrom : valueFrom;
             ValueTo = valueTo == 0 ? defValTo : valueTo;
-            TableName = tableName == "" ? defTableName : tableName;
+            TableName = tableName == null  ? defTableName : tableName;
 
         }
         public DateTime StartDate { get; set; }
@@ -61,7 +61,7 @@ namespace DbInsert
             string dateStr = date.ToString("yyyy-MM-dd");
             double num = GetRandomDouble(rng, ValueFrom, ValueTo);
             string fnum = num.ToString("f", System.Globalization.CultureInfo.InvariantCulture);
-            string str = String.Format("INSERT INTO {0} VALUES ('{1}', {2},'script', getdate(), 'script', getdate());", TableName, dateStr, fnum);
+            string str = String.Format("INSERT INTO {0} VALUES ('{1}', {2}, 'script', getdate(), 'script', getdate());", TableName, dateStr, fnum);
             return str;
         }
 
