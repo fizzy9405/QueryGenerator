@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<section>
+
+    <div>
+        <form>
+
+            <div class="row">
+                <div class="input-fields">
+                    <label for="dateFrom">Date From</label>
+                    <input type="date" class="datepicker" date-format="DD-MMMM-YYYY" id="dateFrom" />
+                </div>
+                <div class="input-fields">
+                    <label for="dateTo">DateTo</label>
+                    <input type="date" class="datepicker" id="dateTo" />
+                </div>
+            </div>
+        </form>
+        <form>
+
+            <div class="row">
+                <div class="input-fields">
+                    <label for="txtValueFrom">Value From</label>
+                    <input type="text" id="txtValueFrom" />
+                </div>
+                <div class="input-fields">
+                    <label for="txtValueTo">Value To</label>
+                    <input type="text" id="txtValueTo" />
+                </div>
+                <div class="input-fields">
+                    <label for="txtTable">Table</label>
+                    <input type="text" id="txtTable" />
+                </div>
+                <button type="button" id="btnGenerate">Generate</button>
+
+            </div>
+        </form>
+    </div>
+    <textarea id="scrollableTextField"></textarea>
+</section>
