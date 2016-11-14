@@ -26,9 +26,7 @@ namespace WebQueryGenerator.Controllers
         // POST: api/Data
         public IEnumerable<string> Post([FromBody]DataModel values)
         {
-            DateTime dateFrom = DateTime.Today;
-            DateTime dateTo = dateFrom.AddDays(6);
-            InsertsGenerator generator = new InsertsGenerator(values.DateFrom, values.DateTo, values.ValueFrom, values.ValueTo, values.Table);
+            InsertsGenerator generator = new InsertsGenerator(values.DateFrom, values.DateTo, values.ValueFrom, values.ValueTo, values.Table, values.Precision);
             return generator.GenerateArray();
         }
 

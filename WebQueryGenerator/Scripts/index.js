@@ -12,6 +12,7 @@
                 ValueFrom: $('#txtValueFrom').val(),
                 ValueTo: $('#txtValueTo').val(),
                 Table: $('#txtTable').val(),
+                Precision: $('#precision').val()
             },
             success: function (data) {
                 var textField = $('#scrollableTextField');

@@ -19,13 +19,14 @@ namespace DbInsert
         }
 
         //too bulky
-        public InsertsGenerator(DateTime startDate, DateTime endDate, double valueFrom, double valueTo, string tableName)
+        public InsertsGenerator(DateTime startDate, DateTime endDate, double valueFrom, double valueTo, string tableName, int precision)
         {
             StartDate = startDate;
             EndDate = endDate;
             ValueFrom = valueFrom == 0 ? defValFrom : valueFrom;
             ValueTo = valueTo == 0 ? defValTo : valueTo;
             TableName = tableName == null  ? defTableName : tableName;
+            Precision = precision;
 
         }
         public DateTime StartDate { get; set; }
@@ -34,6 +35,7 @@ namespace DbInsert
         public double ValueFrom { get; set; }
         public double ValueTo { get; set; }
         public string TableName { get; set; }
+        public int Precision { get; set; }
         public string[] array { get; set; }
         public Random rng = new Random();
 
@@ -60,8 +62,8 @@ namespace DbInsert
         {
             string dateStr = date.ToString("yyyy-MM-dd");
             double num = GetRandomDouble(rng, ValueFrom, ValueTo);
-             
-            string fnum = num.ToString("f6", System.Globalization.CultureInfo.InvariantCulture);
+            string format = "f" + Precision;
+            string fnum = num.ToString( format, System.Globalization.CultureInfo.InvariantCulture);
             string str = String.Format("INSERT INTO {0} VALUES ('{1}', {2}, 'script', getdate(), 'script', getdate());", TableName, dateStr, fnum);
             return str;
         }

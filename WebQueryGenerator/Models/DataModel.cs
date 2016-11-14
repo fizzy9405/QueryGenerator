@@ -12,5 +12,6 @@ namespace WebQueryGenerator.Models
         public double ValueFrom { get; set; }
         public double ValueTo { get; set; }
         public string Table { get; set; }
+        public int Precision { get; set; }
     }
 }
