@@ -16,14 +16,16 @@
             success: function (data) {
                 var textField = $('#scrollableTextField');
                 console.log('success', data);
+                
+                textField.val('');
                 data.forEach(function (elem) {
-                    if (textField.text() == '') {
-                        textField.text(elem);
+                    if (textField.val() == '') {
+                        textField.val(elem);
                     }
                     else {
-                        textField.text(textField.text() + '\n' + elem);
+                        textField.val(textField.val() + '\n' + elem);
                     }
-                })
+                });
             },
             error: function (e) {
                 console.log('error', e);

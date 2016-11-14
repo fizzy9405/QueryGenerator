@@ -60,7 +60,8 @@ namespace DbInsert
         {
             string dateStr = date.ToString("yyyy-MM-dd");
             double num = GetRandomDouble(rng, ValueFrom, ValueTo);
-            string fnum = num.ToString("f", System.Globalization.CultureInfo.InvariantCulture);
+             
+            string fnum = num.ToString("f6", System.Globalization.CultureInfo.InvariantCulture);
             string str = String.Format("INSERT INTO {0} VALUES ('{1}', {2}, 'script', getdate(), 'script', getdate());", TableName, dateStr, fnum);
             return str;
         }

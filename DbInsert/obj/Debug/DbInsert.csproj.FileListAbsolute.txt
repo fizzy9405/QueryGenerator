@@ -2,3 +2,4 @@ F:\Projects\QuoteGenerator\DbInsert\bin\Debug\DbInsert.dll
 F:\Projects\QuoteGenerator\DbInsert\bin\Debug\DbInsert.pdb
 F:\Projects\QuoteGenerator\DbInsert\obj\Debug\DbInsert.dll
 F:\Projects\QuoteGenerator\DbInsert\obj\Debug\DbInsert.pdb
+F:\Projects\QuoteGenerator\DbInsert\obj\Debug\DbInsert.csprojResolveAssemblyReference.cache
