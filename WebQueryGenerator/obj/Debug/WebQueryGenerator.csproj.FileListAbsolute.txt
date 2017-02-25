@@ -40,6 +40,7 @@ F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.Owin.Security.Twitter
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.Web.Infrastructure.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Newtonsoft.Json.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Owin.dll
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\RatesGenerator.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Net.Http.Formatting.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.Helpers.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.Http.dll
@@ -51,6 +52,8 @@ F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.WebPages.Deployment.
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.WebPages.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.WebPages.Razor.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\WebGrease.dll
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\CsvHelper.dll
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\RatesGenerator.pdb
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.AI.DependencyCollector.xml
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.AI.ServerTelemetryChannel.xml
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.AI.Web.xml
@@ -83,10 +86,7 @@ F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.Owin.Security.OAuth.x
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.Owin.Security.Google.xml
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.Owin.Security.Twitter.xml
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\CsvHelper.xml
 F:\Projects\QuoteGenerator\WebQueryGenerator\obj\Debug\WebQueryGenerator.csprojResolveAssemblyReference.cache
 F:\Projects\QuoteGenerator\WebQueryGenerator\obj\Debug\WebQueryGenerator.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\obj\Debug\WebQueryGenerator.pdb
-F:\Projects\QuoteGenerator\WebQueryGenerator\bin\RatesGenerator.dll
-F:\Projects\QuoteGenerator\WebQueryGenerator\bin\RatesGenerator.pdb
-F:\Projects\QuoteGenerator\WebQueryGenerator\bin\CsvHelper.dll
-F:\Projects\QuoteGenerator\WebQueryGenerator\bin\CsvHelper.xml
