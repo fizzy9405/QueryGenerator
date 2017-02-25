@@ -15,7 +15,6 @@ F:\Projects\QuoteGenerator\WebQueryGenerator\bin\WebQueryGenerator.dll.config
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\WebQueryGenerator.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\WebQueryGenerator.pdb
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Antlr3.Runtime.dll
-F:\Projects\QuoteGenerator\WebQueryGenerator\bin\DbInsert.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\EntityFramework.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\EntityFramework.SqlServer.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.AI.Agent.Intercept.dll
@@ -52,7 +51,6 @@ F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.WebPages.Deployment.
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.WebPages.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\System.Web.WebPages.Razor.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\WebGrease.dll
-F:\Projects\QuoteGenerator\WebQueryGenerator\bin\DbInsert.pdb
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.AI.DependencyCollector.xml
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.AI.ServerTelemetryChannel.xml
 F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.AI.Web.xml
@@ -88,3 +86,7 @@ F:\Projects\QuoteGenerator\WebQueryGenerator\bin\Microsoft.Owin.Security.Microso
 F:\Projects\QuoteGenerator\WebQueryGenerator\obj\Debug\WebQueryGenerator.csprojResolveAssemblyReference.cache
 F:\Projects\QuoteGenerator\WebQueryGenerator\obj\Debug\WebQueryGenerator.dll
 F:\Projects\QuoteGenerator\WebQueryGenerator\obj\Debug\WebQueryGenerator.pdb
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\RatesGenerator.dll
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\RatesGenerator.pdb
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\CsvHelper.dll
+F:\Projects\QuoteGenerator\WebQueryGenerator\bin\CsvHelper.xml

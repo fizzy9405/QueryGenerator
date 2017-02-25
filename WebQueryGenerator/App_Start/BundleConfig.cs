@@ -30,6 +30,14 @@ namespace WebQueryGenerator
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/index.css"));
+            bundles.Add(new ScriptBundle("~/bundles/db-insert").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery-ui-1.12.1.js",
+                      "~/Scripts/index.js"));
+            bundles.Add(new ScriptBundle("~/bundles/csv-rates").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery-ui-1.12.1.js",
+                       "~/Scripts/csv-rates.js"));
         }
     }
 }

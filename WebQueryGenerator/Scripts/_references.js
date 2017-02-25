@@ -1,6 +1,7 @@
 ﻿/// <autosync enabled="true" />
 /// <reference path="ai.0.22.19-build00125.js" />
 /// <reference path="bootstrap.js" />
+/// <reference path="csv-rates.js" />
 /// <reference path="index.js" />
 /// <reference path="jquery.validate.js" />
 /// <reference path="jquery.validate.unobtrusive.js" />

@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
-    //  $(".datepicker").datepicker();
     $('#btnGenerate').click(function () {
-
 
         $.ajax({
             url: "api/Data",
@@ -17,7 +15,7 @@
             success: function (data) {
                 var textField = $('#scrollableTextField');
                 console.log('success', data);
-                
+
                 textField.val('');
                 data.forEach(function (elem) {
                     if (textField.val() == '') {
@@ -31,9 +29,7 @@
             error: function (e) {
                 console.log('error', e);
             }
-
-
         });
     });
-})
+});
 

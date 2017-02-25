@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "CSV Generator";
+}
+
+@Scripts.Render("~/bundles/csv-rates")
+
+<ul class="rates-list">
+    <li class="rates-list-item">
+
+        <div class="csv-group-row">
+
+            <div class="row">
+
+                <div class="csv-input-fields">
+                    <label>Code Or ISIN</label>
+                    <input type="text" id="txtCodeOrISIN" />
+                </div>
+                <div class="csv-input-fields">
+                    <label>Date From</label>
+                    <input type="date" class="datepicker" date-format="DD-MMMM-YYYY" id="dateFrom" />
+                </div>
+                <div class="csv-input-fields">
+                    <label>DateTo</label>
+                    <input type="date" class="datepicker" date-format="DD-MMMM-YYYY" id="dateTo" />
+                </div>
+                <div class="csv-input-fields">
+                    <label>Value From</label>
+                    <input type="number" step="0.001" id="numValueFrom" />
+                </div>
+                <div class="csv-input-fields">
+                    <label>Value To</label>
+                    <input type="number" step="0.001" id="numValueTo" />
+                </div>
+               
+            </div>
+        </div>
+    </li>
+
+</ul>
+<button type="button" id="btnGenerateCSV">GenerateCSV</button>
+
+
+

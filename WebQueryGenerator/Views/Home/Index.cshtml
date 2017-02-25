@@ -1,39 +1,35 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "DB Inserts Generator";
 }
-
-<section>
+@Scripts.Render("~/bundles/db-insert")
+<div>
 
     <div>
-        <div class="sector">
+        <div class="csv-group-row">
 
             <div class="row">
-                <div class="input-fields">
+                <div class="csv-input-fields">
                     <label for="dateFrom">Date From</label>
                     <input type="date" class="datepicker" date-format="DD-MMMM-YYYY" id="dateFrom" />
                 </div>
-                <div class="input-fields">
+                <div class="csv-input-fields">
                     <label for="dateTo">DateTo</label>
                     <input type="date" class="datepicker" id="dateTo" />
                 </div>
-                <div class="input-fields">
+                <div class="csv-input-fields">
                     <label for="precision">Precision</label>
                     <input type="text" id="precision" />
                 </div>
-            </div>
-        </div>
-        <div class="sector">
-
-            <div class="row">
-                <div class="input-fields">
+          
+                <div class="csv-input-fields">
                     <label for="txtValueFrom">Value From</label>
                     <input type="text" id="txtValueFrom" />
                 </div>
-                <div class="input-fields">
+                <div class="csv-input-fields">
                     <label for="txtValueTo">Value To</label>
                     <input type="text" id="txtValueTo" />
                 </div>
-                <div class="input-fields">
+                <div class="csv-input-fields">
                     <label for="txtTable">Table</label>
                     <input type="text" id="txtTable" />
                 </div>
@@ -43,4 +39,4 @@
         </div>
     </div>
     <textarea id="scrollableTextField"></textarea>
-</section>
+</div>

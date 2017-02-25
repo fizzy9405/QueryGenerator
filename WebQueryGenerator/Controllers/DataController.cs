@@ -1,4 +1,5 @@
 ﻿using DbInsert;
+using RatesGenerator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +25,18 @@ namespace WebQueryGenerator.Controllers
         }
 
         // POST: api/Data
-        public IEnumerable<string> Post([FromBody]DataModel values)
+        public IEnumerable<string> Post([FromBody]DBGeneratorModel values)
         {
-            InsertsGenerator generator = new InsertsGenerator(values.DateFrom, values.DateTo, values.ValueFrom, values.ValueTo, values.Table, values.Precision);
+            InsertsGenerator generator;
+            if (values.ValueFrom == 0 && values.ValueTo == 0 && values.Table == null && values.Precision == 0)
+            {
+                generator = new InsertsGenerator(values.DateFrom, values.DateTo);
+            }
+            else
+            {
+
+                generator = new InsertsGenerator(values);
+            }
             return generator.GenerateArray();
         }
 

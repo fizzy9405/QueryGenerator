@@ -13,6 +13,11 @@ namespace WebQueryGenerator.Controllers
             return View();
         }
 
+        public ActionResult CSVGenerator()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
