@@ -42,7 +42,7 @@ namespace RatesGenerator
         //write the list on the csv file
         public void GenerateCSV(List<Rate> ratesList) {
             Directory.CreateDirectory("C:\\CSVFolder");
-            TextWriter tw = new StreamWriter($"C:\\CSVFolder\\Rates{DateTime.Now.ToString("ddMMyy-hhmm")}.csv" );
+            TextWriter tw = new StreamWriter(string.Format("C:\\CSVFolder\\Rates{0}.csv" , DateTime.Now.ToString("ddMMyy-hhmm")));
             var csv = new CsvWriter(tw);
             csv.Configuration.HasHeaderRecord = true;
             csv.Configuration.Delimiter = ";";
