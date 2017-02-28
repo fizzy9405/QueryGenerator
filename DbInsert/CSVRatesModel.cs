@@ -13,6 +13,6 @@ namespace RatesGenerator
         public DateTime DateTo { get; set; }
         public double ValueFrom { get; set; }
         public double ValueTo { get; set; }
-        
+      
     }
 }

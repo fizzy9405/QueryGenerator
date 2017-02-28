@@ -3,14 +3,21 @@
 }
 
 @Scripts.Render("~/bundles/csv-rates")
-
+<div class="switch-wrapper">
+    <label id="delimiter" for="myonoffswitch">Delimiter</label>
+    <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+</div>
 <ul class="rates-list">
-    <li class="rates-list-item">
 
+    <li class="rates-list-item" id="0">
         <div class="csv-group-row">
-
             <div class="row">
-
                 <div class="csv-input-fields">
                     <label>Code Or ISIN</label>
                     <input type="text" id="txtCodeOrISIN" />
@@ -31,13 +38,14 @@
                     <label>Value To</label>
                     <input type="number" step="0.001" id="numValueTo" />
                 </div>
-               
             </div>
         </div>
     </li>
 
 </ul>
-<button type="button" id="btnGenerateCSV">GenerateCSV</button>
+<button type="button" class="button" id="btn-add-row">Add row</button>
+
+<button type="button" class="button" id="btnGenerateCSV">Generate CSV</button>
 
 
 

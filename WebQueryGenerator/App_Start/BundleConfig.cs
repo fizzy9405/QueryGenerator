@@ -23,8 +23,7 @@ namespace WebQueryGenerator
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/index.js"));
+                      "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
@@ -33,11 +32,15 @@ namespace WebQueryGenerator
             bundles.Add(new ScriptBundle("~/bundles/db-insert").Include(
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery-ui-1.12.1.js",
+                "~/Scripts/toggles.min.js",
                       "~/Scripts/index.js"));
             bundles.Add(new ScriptBundle("~/bundles/csv-rates").Include(
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery-ui-1.12.1.js",
-                       "~/Scripts/csv-rates.js"));
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/respond.js",
+                "~/Scripts/toggles.min.js",
+                "~/Scripts/csv-rates.js"));
         }
     }
 }

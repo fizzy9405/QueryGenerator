@@ -13,50 +13,73 @@ namespace RatesGenerator
     {
         public CSVRatesGenerator(CSVRatesModel values)
         {
-            Model = values;
+            // Model = values;
         }
-        public void GenerateCSV() {
-            List<Rate> ratesList = GenerateList(Model);
-            GenerateCSV(ratesList);
+        public CSVRatesGenerator(List<CSVRatesModel> coll, bool useComma)
+        {
+            this.models = coll;
+            UseComma = useComma;
+
         }
-        public CSVRatesModel Model { get; set; }
+        public void GenerateCSV()
+        {
+            List<List<Rate>> ratesList = GenerateList(models);
+            GenerateCSV(ratesList, UseComma);
+        }
+        //public CSVRatesModel Model { get; set; }
+        private List<CSVRatesModel> models { get; set; }
         Random rng = new Random();
+        public bool UseComma { get; set; }
 
         //generate list with the values for the period of dates
-        public List<Rate> GenerateList(CSVRatesModel values) {
-            DateTime currentDate = Model.DateFrom;
-            DateTime endDate = Model.DateTo;
-            List<Rate> ratesList = new List<Rate>();
-            while (currentDate<=endDate)
+        public List<List<Rate>> GenerateList(List<CSVRatesModel> values)
+        {
+            List<List<Rate>> ratesLists = new List<List<Rate>>();
+            foreach (var list in models)
             {
-                Rate rate = new Rate();
-                rate.CodeOrIsin = Model.CodeOrIsin;
-                rate.Date = currentDate;
-                rate.Value = GetRandomDouble(rng,Model.ValueFrom,Model.ValueTo);
-                ratesList.Add(rate);
-               currentDate= currentDate.AddDays(1);
+                List<Rate> tempList = new List<Rate>();
+                DateTime currentDate = list.DateFrom;
+                DateTime endDate = list.DateTo;
+                while (currentDate <= endDate)
+                {
+                    Rate rate = new Rate();
+                    rate.CodeOrIsin = list.CodeOrIsin;
+                    rate.Date = currentDate;
+                    rate.Value = GetRandomDouble(rng, list.ValueFrom, list.ValueTo);
+                    tempList.Add(rate);
+                    currentDate = currentDate.AddDays(1);
+                }
+                ratesLists.Add(tempList);
             }
-            return ratesList;
+            return ratesLists;
         }
 
         //write the list on the csv file
-        public void GenerateCSV(List<Rate> ratesList) {
+        public void GenerateCSV(List<List<Rate>> ratesList, bool useComma)
+        {
             Directory.CreateDirectory("C:\\CSVFolder");
-            TextWriter tw = new StreamWriter(string.Format("C:\\CSVFolder\\Rates{0}.csv" , DateTime.Now.ToString("ddMMyy-hhmm")));
+            TextWriter tw = new StreamWriter(string.Format("C:\\CSVFolder\\Rates{0}.csv", DateTime.Now.ToString("ddMMyy-hhmm")));
             var csv = new CsvWriter(tw);
             csv.Configuration.HasHeaderRecord = true;
-            csv.Configuration.Delimiter = ";";
+            if (!useComma)
+            {
+                csv.Configuration.Delimiter = ";";
+            }
             csv.Configuration.RegisterClassMap<RateMap>();
             csv.WriteHeader<Rate>();
-            foreach (var item in ratesList)
-            { 
-                csv.WriteField(item.CodeOrIsin);
-                csv.WriteField(item.Date.ToString("dd/MM/yyyy",CultureInfo.InvariantCulture));
-                csv.WriteField(item.Value);
-                csv.NextRecord();
-                
+            foreach (var list in ratesList)
+            {
+                foreach (var item in list)
+                {
+
+                    csv.WriteField(item.CodeOrIsin);
+                    csv.WriteField(item.Date.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                    csv.WriteField(item.Value);
+                    csv.NextRecord();
+
+                }
             }
-           // csv.WriteRecords(ratesList);
+            // csv.WriteRecords(ratesList);
             tw.Close();
         }
 

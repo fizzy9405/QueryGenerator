@@ -11,12 +11,7 @@ div.input-fields {
     display: inline-block;
 }
 
-label {
-    display: inline-block;
-    width: 80px;
-    margin: 25px 10px 25px 10px;
-    float: left;
-}
+
 
 input {
     display: inline-block;
@@ -36,31 +31,115 @@ div.sector {
     padding: 0px 0px 5px 20px;
 }
 
-button {
-    float: right;
-    margin: 15px 20px 10px 0px;
-    padding: 8px;
-    background-color: #c9c9c9;
-    border: 2px solid gray;
-    border-radius: 5px;
-}
-
-    button:hover {
-        background-color: gray;
-    }
 
 ul.rates-list li {
     list-style-type: none;
 }
 
 #scrollableTextField {
-    max-width: 1115px;
-    width: 1115px;
+    max-width: 100%;
+    width: 100%;
     height: 150px;
     overflow: scroll;
     overflow-x: hidden;
-   
 }
+/*on off switch styles: */
+.switch-wrapper {
+    display: inline-flex;
+    margin: 0 0 12px 12px;
+}
+
+    .switch-wrapper #delimiter {
+        display: block;
+        margin-top: 4%;
+        margin-right: 11px;
+    }
+
+.onoffswitch {
+    position: relative;
+    width: 117px;
+    display: block;
+    height: 33px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    cursor: pointer;
+    border: 2px outset rgba(226, 200, 200, 0.61);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 30px;
+        padding: 0;
+        line-height: 30px;
+        font-size: 14px;
+        color: white;
+        font-family: Trebuchet, Arial, sans-serif;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+
+    .onoffswitch-inner:before {
+        content: "Comma";
+        padding-left: 10px;
+        background-color: rgba(96, 175, 193, 0.74);
+        color: #FFFFFF;
+    }
+
+    .onoffswitch-inner:after {
+        content: "Semicolon";
+        padding-right: 10px;
+        background-color: #c9c9c9;
+        color: #000000;
+        text-align: right;
+    }
+
+.onoffswitch-switch {
+    display: block;
+    width: 18px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 82px;
+    border: 2px inset rgba(226, 200, 200, 0.61);
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+    margin-right: 10px;
+}
+
+/*end of on off switch styles*/
 
 .csv-input-fields {
     display: table-cell;
@@ -106,23 +185,30 @@ hr {
     margin-top: 4%;
 }
 
-#btnGenerateCSV,#btnGenerate {
-    margin:-10px 0 0 0;
+
+
+
+.button {
+    margin: -10px 8px 0 0;
+    float: right;
     padding: 4px 8px;
+    background-color: #c9c9c9;
     border-radius: 16px;
     border: 2px outset rgba(255, 255, 255, 0.5);
 }
+#btnGenerate {
+    margin: 14px -4px 0 0;
+}
 
-    #btnGenerateCSV:hover,
-    #btnGenerate:hover {
+    .button:hover {
         border: 2px inset rgba(255, 255, 255, 0.5);
         background-color: #eaeaea;
     }
 
-    #btnGenerateCSV:focus,#btnGenerate:focus {
+    .button:focus {
         outline: none;
     }
 
-    ul{
-        padding:0;
-    }
+ul {
+    padding: 0;
+}
